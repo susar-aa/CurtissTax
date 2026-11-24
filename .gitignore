@@ -28,10 +28,13 @@
 
 # Standard vendor and node artifacts
 /node_modules
-/public/build
 /public/hot
 /public/storage
 /vendor
+
+# Track production built assets so server doesn't require npm/node to build
+!/public/build
+!/public/build/**
 
 # Local environments (never push actual live/local credentials)
 .env
