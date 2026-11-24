@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'failed' => 'These credentials do not match our records.',
+    'password' => 'The provided password is incorrect.',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'account_suspended' => 'Your account has been suspended. Please contact CurtissTax support.',
+    'account_inactive' => 'Your account is inactive. Please verify your email or contact your administrator.',
+    'no_active_business' => 'You do not have any active business associated with this user account.',
+    'login_title' => 'Sign in to CurtissTax',
+    'register_title' => 'Create your CurtissTax Account',
+    'register_subtitle' => 'Start your 14-day free trial. No credit card required.',
+    'email_label' => 'Email Address',
+    'password_label' => 'Password',
+    'password_confirm_label' => 'Confirm Password',
+    'name_label' => 'Your Full Name',
+    'remember_me' => 'Remember this device',
+    'forgot_password' => 'Forgot password?',
+    'sign_in_button' => 'Sign In',
+    'register_button' => 'Start Free Trial',
+    'have_account' => 'Already have an account?',
+    'no_account' => 'Do not have an account yet?',
+    'reset_password_title' => 'Reset Your Password',
+    'reset_password_btn' => 'Send Password Reset Link',
+    'back_to_login' => 'Back to Login',
+];

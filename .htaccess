@@ -1,0 +1,24 @@
+# Disable directory listing
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent direct access to sensitive configuration, logs, git, and backups
+    <FilesMatch "^\.env|\.git|\.editorconfig|composer\.(json|lock)|package(-lock)?\.json|phpunit\.xml|.*\.sql$|.*\.md$">
+        <IfModule mod_authz_core.c>
+            Require all denied
+        </IfModule>
+        <IfModule !mod_authz_core.c>
+            Order allow,deny
+            Deny from all
+        </IfModule>
+    </FilesMatch>
+
+    # Block direct access to application source directories
+    RewriteRule ^(app|bootstrap|config|database|lang|routes|storage|tests|vendor)(/.*)?$ - [F,L,NC]
+
+    # Rewrite all requests to public folder if document root is set to workspace root
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
